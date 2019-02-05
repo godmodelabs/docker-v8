@@ -2,7 +2,7 @@ FROM phusion/baseimage:latest
 MAINTAINER Kevin Read <me@kevin-read.com>
 
 # install dependencies
-RUN apt-get update && apt-get -y install git subversion make g++ python curl chrpath libc6-dev-i386 g++-multilib lbzip2 unzip bzip2 xz-utils pkg-config libglib2.0-dev libxml2-dev && apt-get clean
+RUN apt-get update && apt-get --allow-unauthenticated -y install git subversion make g++ python curl chrpath libc6-dev-i386 g++-multilib lbzip2 unzip bzip2 xz-utils pkg-config libglib2.0-dev libxml2-dev && apt-get clean
 
 # depot tools
 RUN git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git /usr/local/depot_tools
